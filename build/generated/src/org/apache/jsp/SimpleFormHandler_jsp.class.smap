@@ -1,0 +1,17 @@
+SMAP
+SimpleFormHandler_jsp.java
+JSP
+*S JSP
+*F
++ 0 SimpleFormHandler.jsp
+SimpleFormHandler.jsp
+*L
+1,2:45
+7:47
+10,53:48
+63,2:101,3
+65:107
+65,17:108
+81,13:125
+93,45:138
+*E
