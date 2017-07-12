@@ -70,25 +70,25 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                String pincode=request.getParameter("pincode");
                                String phone=request.getParameter("phone");
                                 
-       try {Class.forName("oracle.jdbc.driver.OracleDriver"); // Oracle Driver
-         } catch (java.lang.ClassNotFoundException e) {System.out.println("ClassNotFoundException: " + e.getMessage());}   
-    Connection con;
-    PreparedStatement ps;
-    con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XE","govind","270289gk");
-    String insertStmt= "INSERT INTO USERS VALUES (?,?,?,?,?,?,?,?,?)";
-     ps = con.prepareStatement(insertStmt);
-     ps.setString(1,username); 
-     ps.setString(2,password);
-     ps.setString(3,firstname);
-     ps.setString(4,lastname);
-     ps.setString(5,emailid);
-     ps.setString(6,city);
-     ps.setString(7,state); 
-     ps.setString(8,pincode);
-     ps.setString(9,phone);     
-     ResultSet rs = ps.executeQuery();
+                                try {Class.forName("oracle.jdbc.driver.OracleDriver"); // Oracle Driver
+                                } catch (java.lang.ClassNotFoundException e) {System.out.println("ClassNotFoundException: " + e.getMessage());}   
+                                 Connection con;
+                                PreparedStatement ps;
+                                con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XE","system","hr");
+                                String insertStmt= "INSERT INTO USERS VALUES (?,?,?,?,?,?,?,?,?)";
+                                ps = con.prepareStatement(insertStmt);
+                                ps.setString(1,username); 
+                                ps.setString(2,password);
+                                ps.setString(3,firstname);
+                                ps.setString(4,lastname);
+                                ps.setString(5,emailid);
+                                ps.setString(6,city);
+                                ps.setString(7,state);
+                                ps.setString(8,pincode);
+                                ps.setString(9,phone);     
+                                ResultSet rs = ps.executeQuery();
                                
-                               %>
+                            %>
                       </p>
 
                         
@@ -132,5 +132,3 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
 </table>
 </body>
 </html>
-     
-
