@@ -63,11 +63,11 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                             <% String username=request.getParameter("username");
                                String password=request.getParameter("password");%>
                         </p>
-   <%  try {Class.forName("oracle.jdbc.driver.OracleDriver"); // Oracle Driver
+   <%  try {Class.forName("oracle.jdbc.driver.OracleDriver").newInstance(); // Oracle Driver
          } catch (java.lang.ClassNotFoundException e) {System.out.println("ClassNotFoundException: " + e.getMessage());}   
     Connection con;
     PreparedStatement ps;
-    con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XE","govind","270289gk");
+    con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XE","system","hr");
      String insertStmt= "SELECT * FROM USERS WHERE username = ?";
      ps = con.prepareStatement(insertStmt);
      ps.setString(1,username);
@@ -215,4 +215,3 @@ Class :
 </table>
 </body>
 </html>
-     
